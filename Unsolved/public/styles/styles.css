@@ -1,3 +1,24 @@
 .list-group-item {
   line-height: 2.5;
 }
+
+#profile {
+  border-radius: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#line{
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+#Bio{
+  text-align: center;
+}
+
+.titleInfo{
+  text-align: center;
+}
+
