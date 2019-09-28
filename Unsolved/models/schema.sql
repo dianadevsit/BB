@@ -1,32 +1,14 @@
 DROP DATABASE IF EXISTS BookBKdb;
 CREATE DATABASE BookBKdb;
 USE BookBKdb;
-CREATE TABLE user (
- id INTEGER AUTO_INCREMENT NOT NULL,
- user_id VARCHAR(10)NOT NULL,
- user_pwd VARCHAR(255)NOT NULL,
- first_name VARCHAR(25)NOT NULL,
- last_name VARCHAR(25)NOT NULL,
- email_id VARCHAR(50)NOT NULL,
- student_type CHAR(10) NOT NULL,
- User_BIO TEXT NOT NULL,
- PRIMARY KEY(id)
-);
-CREATE TABLE skills (
-   id INTEGER AUTO_INCREMENT NOT NULL,
-   Skill CHAR(20) NOT NULL,
-   PRIMARY KEY(id)
-);
-CREATE TABLE rating (
-   id INTEGER AUTO_INCREMENT NOT NULL,
-   Skill_Level INTEGER NOT NULL,
-   Skill_Label CHAR(20) NOT NULL,
-   PRIMARY KEY(id)
-);
-CREATE TABLE user_skill_profile (
-  id INTEGER AUTO_INCREMENT NOT NULL,
-  user_id VARCHAR(10) NOT NULL,
-  skill_id INTEGER NOT NULL,
-  rating_id INTEGER NOT NULL,
-  PRIMARY KEY(id)
-);
+
+INSERT INTO skills (Skill) values ('Javascript');
+INSERT INTO skills (Skill) values ('JQuery');
+INSERT INTO skills (Skill) values ('Node');
+INSERT INTO skills (Skill) values ('CSS');
+
+INSERT INTO rating (Skill_Level) values ('4');
+INSERT INTO rating (Skill_Level) values ('5');
+INSERT INTO rating (Skill_Level) values ('6');
+INSERT INTO rating (Skill_Level) values ('7');
+INSERT INTO rating (Skill_Level) values ('8');
