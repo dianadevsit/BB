@@ -97,3 +97,41 @@ var handleDeleteBtnClick = function() {
 // Add event listeners to the submit and delete buttons
 $submitBtn.on("click", handleFormSubmit);
 $exampleList.on("click", ".delete", handleDeleteBtnClick);
+
+
+
+//Create A Bootstrap card for each new skill added
+// create a card with different metrics//
+
+function createCard(response, response2) {
+    
+    // Create a new boostrap card container
+    var article = $("<article>");
+    article.addClass("card");
+    article.addClass("stockCard")
+
+    // Create a new card body container
+    var cardBody = $("<div>");
+    cardBody.addClass("card-body");
+
+    // Add Skill Name
+    var skillName = $("<h1>");
+    skillName.addClass("card-title");
+    console.log(response) //add response path
+    skillName.html(response...);
+    article.append(skillName);
+
+    // Add information/ metrics
+    //date (daily) function//
+    var rating = response... //add response path
+    console.log(rating)
+    console.log(newDate)
+    var rating = $("<h3>");
+    rating.addClass("card-text");
+    rating.html(response...); //add response path
+    article.append(rating);
+    // Append the new card to the HTML body
+    $("#skillsContainer").append(article);
+    //--------------------------------------------------------//
+//end function //
+        

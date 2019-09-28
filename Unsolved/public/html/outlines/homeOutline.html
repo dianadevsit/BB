@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../styles/styles.css">
+    <title>BootBook Home</title>
+</head>
+
+<body>
+    <!--Navbar Start-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="homeOutline.html">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="pairingOutline.html">Pairing</a>
+            </li>
+            <li class="nav-item">
+                    <a class="navbar-brand" style="margin-left:1em;" href="#">BootBook</a>
+            </li>
+        </ul>
+    </nav>
+    <!--Navbar End-->
+
+    <!--Container Start-->
+    <div class="container" style="margin-top: 2em;">
+        <div class="row">
+
+            <div class="col-md-1">
+
+
+            </div>
+            <!-- Profile photo, name, username display-->
+            <div class="col-md-10">
+                <img src="../../images/profilePhoto.jpg" width=240px; id="profile" class="center" alt="...">
+
+                <h1 class="titleInfo">Dimitrios Tsioutsiopoulos</h1>
+                <h5 class="titleInfo">@DimiGod</h5>
+
+            </div>
+            <div id="line" style='border-bottom:1px solid #ccc;'></div>
+            <!--Button to edit profile photo or bio-->
+            <div class="col-md-1">
+                <a href="#" class="btn btn-secondary" id="editProfileButton">Edit</a>
+            </div>
+
+
+        </div>
+        <div id="line" style='border-bottom:1px solid #ccc;'></div>
+        <div class="row">
+            <div class="col-md-1">
+
+            </div>
+            <!--Bio section for users to say a few things about what they enjoy, projects they're passionate about, and etc..-->
+            <div id="Bio" class="col-md-10">
+                <p>I'm a second generation Greek-American, and the first in my family to graduate from college. I
+                    achieved a B.B.A. in Finance from the university of Wisconsin- Milwaukee, am a Master of Finance
+                    (A.L.M.) Candidate at Harvard University,
+                    and am currently pursuing a Web Development Certificate from the Coding Bootcamp at Harvard as well.
+                    My
+                    passions are business
+                    (especially FinTech), entrepreneurship, and innovation. I enjoy reading, exploring new places,
+                    and trying new restaurants around town. </p>
+            </div>
+
+            <div class="col-md-1">
+
+            </div>
+
+        </div>
+        <div id="line" style='border-bottom:1px solid #ccc;'></div>
+    </div>
+    <div class="container" id="skillsContainer">
+        <!--Skills Section goes here, Bootstrap cards will be generated for each new skill we add.-->
+
+        <!--Button to add new skills: id will be "addSkillButton"-->
+        <a href="#" class="btn btn-secondary" id="addSkillButton"style="margin-bottom: 2em;">Add New Skill</a>
+        <!-- the following section will be where skills' Bootstrap cards are stored, each card includes a skill, rating, and an edit button- 
+        for users to change their ratings as they learn.-->
+        <div class="row" id="skillsList">
+                <div class="col-md-3">
+                        <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
+                                <div class="card-header"class="skill">Javascript</div>
+                                <div class="card-body">
+                                  <h5 class="card-title"class="rating">6/10</h5>
+                                  <a href="#" class="btn btn-secondary" class="editSkillsButton">Edit</a>
+                                </div>
+                              </div>
+                </div>
+                <div class="col-md-3">
+                                <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
+                                        <div class="card-header"class="skill">HTML</div>
+                                        <div class="card-body">
+                                          <h5 class="card-title"class="rating">9/10</h5>
+                                          <a href="#" class="btn btn-secondary" class="editSkillsButton">Edit</a>
+                                        </div>
+                                      </div>
+                </div>
+                <div class="col-md-3">
+                        <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
+                                <div class="card-header"class="skill">Bootstrap</div>
+                                <div class="card-body">
+                                  <h5 class="card-title"class="rating">8/10</h5>
+                                  <a href="#" class="btn btn-secondary" class="editSkillsButton">Edit</a>
+                                </div>
+                              </div>
+                </div>
+                <div class="col-md-3">
+                        <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
+                                <div class="card-header"class="skill">Jquery</div>
+                                <div class="card-body">
+                                  <h5 class="card-title"class="rating">5/10</h5>
+                                  <a href="#" class="btn btn-secondary" class="editSkillsButton">Edit</a>
+                                </div>
+                              </div>
+                </div>
+        </div>
+        <div class="row" id="skillsList">
+                <div class="col-md-3">
+                        <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
+                                <div class="card-header"class="skill">Express</div>
+                                <div class="card-body">
+                                  <h5 class="card-title"class="rating">5/10</h5>
+                                  <a href="#" class="btn btn-secondary" class="editSkillsButton">Edit</a>
+                                </div>
+                              </div>
+                </div>
+                <div class="col-md-3">
+                        <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
+                                <div class="card-header"class="skill">node.js</div>
+                                <div class="card-body">
+                                  <h5 class="card-title"class="rating">6/10</h5>
+                                  <a href="#" class="btn btn-secondary" class="editSkillsButton">Edit</a>
+                                </div>
+                              </div>
+                </div>
+                <div class="col-md-3">
+                        <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
+                                <div class="card-header"class="skill">mysql</div>
+                                <div class="card-body">
+                                  <h5 class="card-title"class="rating">6/10</h5>
+                                  <a href="#" class="btn btn-secondary" class="editSkillsButton">Edit</a>
+                                </div>
+                              </div>
+                </div>
+                <div class="col-md-3">
+                        <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
+                                <div class="card-header"class="skill">sequelizer</div>
+                                <div class="card-body">
+                                  <h5 class="card-title"class="rating">4/10</h5>
+                                  <a href="#" class="btn btn-secondary" class="editSkillsButton">Edit</a>
+                                </div>
+                              </div>
+                </div>
+        </div>
+    </div>
+    <!--End Skills Section-->
+</body>
+
+</html>
