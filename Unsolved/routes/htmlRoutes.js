@@ -4,12 +4,7 @@ module.exports = function(app) {
   
   //Logging in. Get Route. Display login page
   app.get("/api/login", function(req, res) {
-    db.BookBKdb.findOne({
-      //Add a include and where clause here if needed
-      // Include: [db.AnotherTable]
-    }).then(function(dbLoginInfo){
-      res.json(dbLoginInfo);
-    })
+    res.sendFile(path.join(__dirname, "../public/html/profile.html"));
   });
 
   // Render 404 page for any unmatched routes
