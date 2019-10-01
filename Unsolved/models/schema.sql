@@ -1,37 +1,32 @@
 DROP DATABASE IF EXISTS BookBKdb;
 CREATE DATABASE BookBKdb;
-
 USE BookBKdb;
-
 CREATE TABLE user (
-  id INTEGER AUTO_INCREMENT NOT NULL,
-  user_id VARCHAR(10)NOT NULL,
-  user_pwd VARCHAR(255)NOT NULL,
-  first_name VARCHAR(25)NOT NULL,
-  last_name VARCHAR(25)NOT NULL,
-  email_id VARCHAR(50)NOT NULL,
-  student_type CHAR(10) NOT NULL,
-  user_bio TEXT NOT NULL,
-  PRIMARY KEY (id)
- );
-
+ id INTEGER AUTO_INCREMENT NOT NULL,
+ user_id VARCHAR(10)NOT NULL,
+ user_pwd VARCHAR(255)NOT NULL,
+ first_name VARCHAR(25)NOT NULL,
+ last_name VARCHAR(25)NOT NULL,
+ email_id VARCHAR(50)NOT NULL,
+ student_type CHAR(10) NOT NULL,
+ User_BIO TEXT NOT NULL,
+ PRIMARY KEY(id)
+);
 CREATE TABLE skills (
-    id INTEGER AUTO_INCREMENT NOT NULL,
-    skill CHAR(20) NOT NULL,
-    PRIMARY KEY (id)
-);
-
-CREATE TABLE rating (
-    id INTEGER AUTO_INCREMENT NOT NULL,
-    skill_level INTEGER NOT NULL,
-    skill_label CHAR(20) NOT NULL,
-    PRIMARY KEY (id)
-);
-
-CREATE TABLE userskill_profile (
    id INTEGER AUTO_INCREMENT NOT NULL,
-   user_id VARCHAR(10) NOT NULL,
-   skill_id INTEGER NOT NULL,
-   rating_id INTEGER NOT NULL,
-   PRIMARY KEY (id)
+   Skill CHAR(20) NOT NULL,
+   PRIMARY KEY(id)
+);
+CREATE TABLE rating (
+   id INTEGER AUTO_INCREMENT NOT NULL,
+   Skill_Level INTEGER NOT NULL,
+   Skill_Label CHAR(20) NOT NULL,
+   PRIMARY KEY(id)
+);
+CREATE TABLE user_skill_profile (
+  id INTEGER AUTO_INCREMENT NOT NULL,
+  user_id VARCHAR(10) NOT NULL,
+  skill_id INTEGER NOT NULL,
+  rating_id INTEGER NOT NULL,
+  PRIMARY KEY(id)
 );
