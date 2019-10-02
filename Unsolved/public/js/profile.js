@@ -43,7 +43,9 @@
   
     // This function grabs userSkillsArray from the database and updates the view
     function getUserSkills() {
-      $.get("/api/getUserSkills", function(data) {
+      console.log("entered the get user skills function");
+      $.get("/api/getuserskills", function(data) {
+        console.log("after the get call");
         userSkillsArray = data;
         // initializeRows();
         console.log(userSkillsArray);

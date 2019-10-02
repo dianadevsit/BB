@@ -1,6 +1,6 @@
 module.exports = function(sequelize, DataTypes) {
-  var Skills = sequelize.define("Skills", {
+  var skills = sequelize.define("skills", {
     skill: DataTypes.STRING
   });
-  return Skills;
+  return skills;
 };
