@@ -14,16 +14,16 @@
 
    $(document).ready(function() {
     // Getting a reference to the input field where user adds a new todo
-    var $newSkillInput = $("input.new-item");
-    // Our new userSkillsArray will go inside the todoContainer
-    var $todoContainer = $("#skillsContainer");
-    // Adding event listeners for deleting, editing, and adding todos
-    $(document).on("click", "button.delete", deleteTodo);
-    $(document).on("click", "button.complete", toggleComplete);
-    $(document).on("click", ".todo-item", editRating);
-    $(document).on("keyup", ".todo-item", finishEdit);
-    $(document).on("blur", ".todo-item", cancelEdit);
-    $(document).on("submit", "#todo-form", insertTodo);
+    // var $newSkillInput = $("input.new-item");
+    // // Our new userSkillsArray will go inside the todoContainer
+    // var $todoContainer = $("#skillsContainer");
+    // // Adding event listeners for deleting, editing, and adding todos
+    // $(document).on("click", "button.delete", deleteTodo);
+    // $(document).on("click", "button.complete", toggleComplete);
+    // $(document).on("click", ".todo-item", editRating);
+    // $(document).on("keyup", ".todo-item", finishEdit);
+    // $(document).on("blur", ".todo-item", cancelEdit);
+    // $(document).on("submit", "#todo-form", insertTodo);
   
     // Our initial userSkillsArray array
     var userSkillsArray = [];
@@ -45,7 +45,8 @@
     function getUserSkills() {
       $.get("/api/getUserSkills", function(data) {
         userSkillsArray = data;
-        initializeRows();
+        // initializeRows();
+        console.log(userSkillsArray);
       });
     }
   
