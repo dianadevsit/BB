@@ -81,7 +81,8 @@ $(document).ready(function() {
   function createNewRow(UserSkillsProfile) {
     var $newInputRow = $(
       [
-        "<li class='list-group-item todo-item'>",
+        "<li class='list-group-item todo-item'>", //turn into skill, not editable
+        "<li class='list-group-item todo-item'>", //turn into rating, make rating editable
         "<span>",
         UserSkillsProfile.text,
         "</span>",
