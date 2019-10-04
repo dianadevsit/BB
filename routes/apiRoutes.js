@@ -34,8 +34,50 @@ module.exports = function(app) {
       return res.json(results);
     });
   });
-};
 
+  app.post("/api/addNewUser", function(req, res) {
+    console.log(req.body);
+    console.log("Hello");
+    db.users
+      .create({
+        // userID: "user001",
+        // userPWD: "user001",
+        // firstName: "FDimi",
+        // lastName: "LDimi",
+        // emailID: "Dimi@gmial.com",
+        // studentType: "Alumnus",
+        // userBio: "My Bio"
+        userID: req.body.userID,
+        userPWD: req.body.userPWD,
+        firstName: req.body.firstName,
+        lastName: req.body.lastName,
+        emailID: req.body.emailID,
+        studentType: req.body.studentType,
+        userBio: req.body.userBio
+      })
+      .then(function(dbUser) {
+        res.json(dbUser);
+      });
+  });
+};
+// POST route for adding a new user
+//   app.post("/api/addNewUser", function(req, res) {
+//     console.log(req.body);
+//     db.users
+//       .create({
+//         userID: req.body.userID,
+//         userPWD: req.body.userPWD,
+//         firstName: req.body.firstName,
+//         lastName: req.body.lastName,
+//         emailID: req.body.emailID,
+//         studentType: req.body.studentType,
+//         userBio: req.body.userBio
+//       })
+//       .then(function(dbUser) {
+//         res.json(dbUser);
+//       });
+//   });
+// };
 //Logging in
 //-->Get Route
 //--> Display login page
