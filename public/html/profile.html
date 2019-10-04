@@ -91,21 +91,10 @@
                     <div class="form-group">
                       <label for="exampleFormControlSelect1">Select Skill</label>
                       <select class="form-control" id="skill-name" placeholder="select a skill">
-                        <div id =insertoptions>
-                          
+                        <div id="insertoptions">
 
                         </div>
-                        <!-- <option>HTML</option>
-                        <option>CSS</option>
-                        <option>Bootstrap</option>
-                        <option>JavaScript</option>
-                        <option>Jquery</option>
-                        <option>node.js</option>
-                        <option>mysql</option>
-                        <option>express</option>
-                        <option>sequelizer</option>
-                        <option>react.js</option>
-                        <option>handlebars</option> -->
+
                       </select>
                     </div>
                   </td>
@@ -113,20 +102,13 @@
                     <div class="form-group">
                       <label for="exampleFormControlSelect1">Rate Your Ability</label>
                       <select class="form-control" id="rating-form">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                        <option>6</option>
-                        <option>7</option>
-                        <option>8</option>
-                        <option>9</option>
-                        <option>10</option>
+                        <div id="insertRatingOptions">
+
+                        </div>
                       </select>
                     </div>
                   </td>
-                  <td><button type="submit" class="btn btn-secondary">Add Skill</button></td>
+                  <td><button type="submitSkill" class="btn btn-secondary">Add Skill</button></td>
                 </form>
               </tr>
             </tbody>
@@ -136,139 +118,8 @@
     </div>
   </div>
   <!--End of Skills Container-->
-  <!--Insert Script/Jquery Reference Here-->
-
-  <!-- <div class="container" id="skillsContainer"> -->
-  <!-- INSERT SCRIPT/JQUERY REFERENCE HERE-->
-  <!--Skills Section goes here, Bootstrap cards will be generated for each new skill we add.-->
-  <!--Button to add new skills: id will be "addSkillButton"-->
-  <!-- <a href="#" class="btn btn-secondary" id="addSkillButton"style="margin-bottom: 2em;">Add New Skill</a> -->
-  <!-- the following section will be where skills' Bootstrap cards are stored, each card includes a skill, rating, and an edit button- 
-        for users to change their ratings as they learn.-->
-
-  <!--Once the "Add Skill" button has been pressed, make the add skill button dissappear, and reveal the form section below-->
-
-  <!-- <div class="row" id="new skills form">
-            <form>
-                <div class="form-group">
-                    <label for="exampleFormControlSelect1">Select Skill</label>
-                    <select class="form-control" id="skillForm">
-                      <option>HTML</option>
-                      <option>CSS</option>
-                      <option>Bootstrap</option>
-                      <option>JavaScript</option>
-                      <option>Jquery</option>
-                      <option>node.js</option>
-                      <option>mysql</option>
-                      <option>express</option>
-                      <option>sequelizer</option>
-                      <option>react.js</option>
-                      <option>handlebars</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                  <label for="exampleFormControlSelect1">Rate Your Ability (1-10, 1=Beginner, 10=Expert)</label>
-                  <select class="form-control" id="ratingForm">
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                    <option>6</option>
-                    <option>7</option>
-                    <option>8</option>
-                    <option>9</option>
-                    <option>10</option>
-                  </select>
-                </div>
-                <a href="#" class="btn btn-secondary" id="submit"style="margin-bottom: 2em;">Submit</a>
-              </form>
-        </div>  
-        Only make the previous section appear once the add skill button has been pressed
-        <span class="skills-container">
-        </span> -->
-  <!-- <div class="row" id="skillsList"> -->
-  <!--In the future we will have a javascript function that churnes out new bootstrap cards for each skill- 
-            but for now I wanted to leave these outlines here for reference-->
-  <!-- <div class="col-md-3">
-                        <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
-                                <div class="card-header"class="skill"></div>
-                                <div class="card-body">
-                                  <h5 class="card-title"class="rating"></h5>
-                                  <a href="#" class="btn btn-secondary" class="editSkillsButton">Edit</a>
-                                </div>
-                              </div>
-                </div>
-                <div class="col-md-3">
-                                <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
-                                        <div class="card-header"class="skill"></div>
-                                        <div class="card-body">
-                                          <h5 class="card-title"class="rating"></h5>
-                                          <a href="#" class="btn btn-secondary" class="editSkillsButton">Edit</a>
-                                        </div>
-                                      </div>
-                </div>
-                <div class="col-md-3">
-                        <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
-                                <div class="card-header"class="skill"></div>
-                                <div class="card-body">
-                                  <h5 class="card-title"class="rating"></h5>
-                                  <a href="#" class="btn btn-secondary" class="editSkillsButton">Edit</a>
-                                </div>
-                              </div>
-                </div>
-                <div class="col-md-3">
-                        <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
-                                <div class="card-header"class="skill"></div>
-                                <div class="card-body">
-                                  <h5 class="card-title"class="rating"></h5>
-                                  <a href="#" class="btn btn-secondary" class="editSkillsButton">Edit</a>
-                                </div>
-                              </div>
-                </div>
-        </div>
-        <div class="row" id="skillsList">
-                <div class="col-md-3">
-                        <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
-                                <div class="card-header"class="skill"></div>
-                                <div class="card-body">
-                                  <h5 class="card-title"class="rating"></h5>
-                                  <a href="#" class="btn btn-secondary" class="editSkillsButton">Edit</a>
-                                </div>
-                              </div>
-                </div>
-                <div class="col-md-3">
-                        <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
-                                <div class="card-header"class="skill"></div>
-                                <div class="card-body">
-                                  <h5 class="card-title"class="rating"></h5>
-                                  <a href="#" class="btn btn-secondary" class="editSkillsButton">Edit</a>
-                                </div>
-                              </div>
-                </div>
-                <div class="col-md-3">
-                        <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
-                                <div class="card-header"class="skill"></div>
-                                <div class="card-body">
-                                  <h5 class="card-title"class="rating"></h5>
-                                  <a href="#" class="btn btn-secondary" class="editSkillsButton">Edit</a>
-                                </div>
-                              </div>
-                </div>
-                <div class="col-md-3">
-                        <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
-                                <div class="card-header"class="skill"></div>
-                                <div class="card-body">
-                                  <h5 class="card-title"class="rating"></h5>
-                                  <a href="#" class="btn btn-secondary" class="editSkillsButton">Edit</a>
-                                </div>
-                              </div>
-                </div>
-        </div>
-    </div> -->
-  <!--End Skills Section-->
-  <!--Custom Script-->
-  <script src="../js/profile.js"></script>
+  <!--Insert Script-->
+<script src="../js/profile.js"></script>
 </body>
 
 </html>

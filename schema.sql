@@ -2,13 +2,12 @@ DROP DATABASE IF EXISTS BookBKdb;
 CREATE DATABASE BookBKdb;
 USE BookBKdb;
 
-INSERT INTO skills (Skill) values ('Javascript');
-INSERT INTO skills (Skill) values ('JQuery');
-INSERT INTO skills (Skill) values ('Node');
-INSERT INTO skills (Skill) values ('CSS');
+Insert into skills (id, skill, createdAt, updatedAt) values (1, "HTML", current_time(), current_time());
+Insert into skills (id, skill, createdAt, updatedAt) values (2, "CSS", current_time(), current_time());
+Insert into skills (id, skill, createdAt, updatedAt) values (3, "Bootstrap", current_time(), current_time());
+Insert into skills (id, skill, createdAt, updatedAt) values (4, "Javascript", current_time(), current_time());
 
-INSERT INTO rating (Skill_Level) values ('4');
-INSERT INTO rating (Skill_Level) values ('5');
-INSERT INTO rating (Skill_Level) values ('6');
-INSERT INTO rating (Skill_Level) values ('7');
-INSERT INTO rating (Skill_Level) values ('8');
+Insert into ratings (id, ratingID, ratingDesc, createdAt, updatedAt) values (1,1, "1 months experience", current_time(), current_time());
+Insert into ratings (id, ratingID, ratingDesc, createdAt, updatedAt) values (2,2, "2 months experience", current_time(), current_time());
+Insert into ratings (id, ratingID, ratingDesc, createdAt, updatedAt) values (3,3, "3 months experience", current_time(), current_time());
+Insert into ratings (id, ratingID, ratingDesc, createdAt, updatedAt) values (4,4, "4 months experience", current_time(), current_time());
