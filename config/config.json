@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "Dimitri2",
+    "password": "MySql123!",
     "database": "BookBKdb",
     "host": "localhost",
     "port": 3306,
