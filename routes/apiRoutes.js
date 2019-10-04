@@ -1,4 +1,3 @@
-// Requiring our Todo model
 var db = require("../models");
 
 // Routes
@@ -6,21 +5,32 @@ var db = require("../models");
 module.exports = function(app) {
   // GET route for getting all of the posts
 
-  // app.get("/api/getuserskills", function(req, res) {
-  //   db.UserSkillsProfiles.findOne({}).then(function(results) {
-  //     return res.json(results);
-  //   });
-
   app.get("/api/getSkillProfileResults/:skillID1/:ratingID1", function(
     req,
     res
   ) {
-    db.UserSkillsProfiles.findAll({
-      where: {
-        skillID: req.params.skillID1,
-        ratingID: req.params.ratingID1
-      }
-    }).then(function(results) {
+    db.userSkillsProfiles
+      .findAll({
+        where: {
+          skillID: req.params.skillID1,
+          ratingID: req.params.ratingID1
+        }
+      })
+      .then(function(results) {
+        return res.json(results);
+      });
+  });
+
+  // Send the full list of skills up to the UI
+  app.get("/api/getSkillsList", function(req, res) {
+    db.skills.findAll({}).then(function(results) {
+      return res.json(results);
+    });
+  });
+
+  // Send the full list of ratings up to the UI
+  app.get("/api/getRatingsList", function(req, res) {
+    db.ratings.findAll({}).then(function(results) {
       return res.json(results);
     });
   });

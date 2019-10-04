@@ -118,6 +118,26 @@
     <script>    
         console.log("Entered the JS file");
 
+        var skillResultsArray = [];
+        getListOfSkills();
+        function getListOfSkills(){
+          $.get("/api/getSkillsList", function(data) {
+            console.log("After the get skills request is complete");
+            skillResultsArray = data;
+            console.log(skillResultsArray);
+          });
+        };
+
+        var ratingsResultsArray = [];
+        getListOfRatings();
+        function getListOfRatings(){
+          $.get("/api/getRatingsList", function(data) {
+            console.log("After the get ratings request is complete");
+            ratingsResultsArray = data;
+            console.log(ratingsResultsArray);
+          });
+        };
+
         $("#submitpairing").on("click", function(event) {
         event.preventDefault();
         console.log("Entered submit pairing button function");
@@ -126,20 +146,23 @@
             ratingID: $("#ratingForm").val()
         };
 
-        var skillResultsArray = [];
+        var skillProfileResultsArray = [];
         console.log(skillSearchInput);
         console.log("Ready to make the get request");
-        console.log("Skill Search ID" + skillSearchInput.skillID);
+        // console.log("Skill Search ID" + skillSearchInput.skillID);
         var skillID1 = parseInt(skillSearchInput.skillID);
         var ratingID1 = parseInt(skillSearchInput.ratingID);
+
+        console.log("IDs " + skillID1 + " " + ratingID1);
         $.get("/api/getSkillProfileResults/" + skillID1 + "/" + ratingID1, function(data) {
             console.log("After the get request is complete");
-            skillResultsArray = data;
-            console.log(skillResultsArray);
+            skillProfileResultsArray = data;
+            console.log(skillProfileResultsArray);
         });
         });
     </script>
+    <!-- <script> src="/js/pairing.js"</script> -->
 </body>
 
-<!-- <script> src="/js/pairing.js" </script> -->
+
 </html>
