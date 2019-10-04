@@ -1,14 +1,15 @@
 {
   "development": {
     "username": "root",
-    "password": null,
+    "password": "Dimitri2",
     "database": "BookBKdb",
     "host": "localhost",
+    "port": 3306,
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
-    "password": null,
+    "password": "Dimitri2",
     "database": "BookBKdb",
     "host": "localhost",
     "dialect": "mysql",

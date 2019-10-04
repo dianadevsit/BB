@@ -24,7 +24,7 @@
 
 .navbar-nav {
   flex-direction: row;
-}
+ }
 
 .nav-link {
   padding-right: .5rem !important;
@@ -33,4 +33,7 @@
 
 #profile2{
   border-radius: 50%;
+}
+#skillsContainer {
+  background-image: url("../images/graphic.png");
 }
