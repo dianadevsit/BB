@@ -6,36 +6,48 @@ var db = require("../models");
 module.exports = function(app) {
   // GET route for getting all of the posts
 
-  app.get("/api/getuserskills", function(req, res) {
-    db.UserSkillsProfiles.findOne({}).then(function(results) {
+  // app.get("/api/getuserskills", function(req, res) {
+  //   db.UserSkillsProfiles.findOne({}).then(function(results) {
+  //     return res.json(results);
+  //   });
+
+  app.get("/api/getSkillProfileResults/:skillID1/:ratingID1", function(
+    req,
+    res
+  ) {
+    db.UserSkillsProfiles.findAll({
+      where: {
+        skillID: req.params.skillID1,
+        ratingID: req.params.ratingID1
+      }
+    }).then(function(results) {
       return res.json(results);
     });
   });
 };
 
 //Logging in
-  //-->Get Route
-    //--> Display login page
+//-->Get Route
+//--> Display login page
 
 //Display Homepage
-  //-->Get Route
-    //-->Display Homepage By Default
+//-->Get Route
+//-->Display Homepage By Default
 
 //Edit User Page
-  //-->Post Route
-    //--> edit aspects of the page aside from skills
+//-->Post Route
+//--> edit aspects of the page aside from skills
 
 //Edit Skills
-  //-->Get all current skills/Ratings, and form to edit rating
-    //-->Submit Changes
-      //-->Post Route
+//-->Get all current skills/Ratings, and form to edit rating
+//-->Submit Changes
+//-->Post Route
 
-//Add Skills 
-  //-->Get Current Skill list & List of Available other skills
-    //-->Submit new skill and initial rating
-      //-->Post Route
+//Add Skills
+//-->Get Current Skill list & List of Available other skills
+//-->Submit new skill and initial rating
+//-->Post Route
 
-  
 //   // Get all examples
 //   app.get("/api/examples", function(req, res) {
 //     db.Example.findAll({}).then(function(dbExamples) {
@@ -105,7 +117,6 @@ module.exports = function(app) {
 // //     });
 // //   });
 // // };
-
 
 // // app.get("/api/authors", function(req, res) {
 //       // Here we add an "include" property to our options in our findAll query
