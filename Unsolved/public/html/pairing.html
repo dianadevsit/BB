@@ -9,6 +9,7 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="../../styles/styles.css">
     <title>BootBook Home</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -43,7 +44,12 @@
                         <div class="form-group">
                             <label for="exampleFormControlSelect1">Select Skill</label>
                             <select class="form-control" id="skillForm">
-                              <option>HTML</option>
+                              <option>1</option>
+                              <option>2</option>
+                              <option>3</option>
+                              <option>4</option>
+                              <option>5</option>
+                              <!-- <option>HTML</option>
                               <option>CSS</option>
                               <option>Bootstrap</option>
                               <option>JavaScript</option>
@@ -53,7 +59,7 @@
                               <option>express</option>
                               <option>sequelizer</option>
                               <option>react.js</option>
-                              <option>handlebars</option>
+                              <option>handlebars</option> -->
                             </select>
                         </div>
             </div>
@@ -74,7 +80,7 @@
                         </select>
                       </div>
                     </form>
-                    <a href="#" class="btn btn-secondary" id="submit"style="margin-bottom: 2em;">Submit</a>
+                    <a href="#" class="btn btn-secondary" id="submitpairing"style="margin-bottom: 2em;">Submit</a>
             </div>
         </div>
         <div class="row" style="margin-top:2em;">
@@ -108,5 +114,32 @@
             </div>
         </div>
     </div>
+
+    <script>    
+        console.log("Entered the JS file");
+
+        $("#submitpairing").on("click", function(event) {
+        event.preventDefault();
+        console.log("Entered submit pairing button function");
+        var skillSearchInput = {
+            skillID: $("#skillForm").val(),
+            ratingID: $("#ratingForm").val()
+        };
+
+        var skillResultsArray = [];
+        console.log(skillSearchInput);
+        console.log("Ready to make the get request");
+        console.log("Skill Search ID" + skillSearchInput.skillID);
+        var skillID1 = parseInt(skillSearchInput.skillID);
+        var ratingID1 = parseInt(skillSearchInput.ratingID);
+        $.get("/api/getSkillProfileResults/" + skillID1 + "/" + ratingID1, function(data) {
+            console.log("After the get request is complete");
+            skillResultsArray = data;
+            console.log(skillResultsArray);
+        });
+        });
+    </script>
 </body>
+
+<!-- <script> src="/js/pairing.js" </script> -->
 </html>
