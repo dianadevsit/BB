@@ -12,6 +12,10 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/html/pairing.html"));
   });
 
+  app.get("/addnewuser", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/html/newUser.html"));
+  });
+
   // Render 404 page for any unmatched routes
   app.get("*", function(req, res) {
     res.render("404");
