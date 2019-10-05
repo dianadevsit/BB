@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="../styles/styles.css">
+    <title>BootBook Home</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <!--Navbar Start-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="navbar-brand" style="margin-left:1em;" href="#">BootBook</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-2">
+                <img src="../images/logo.png" style="margin-top:2em;" width=270px;>
+                <h1 style="margin-top:1em;">Welcome To BootBook</h1>
+                <h3 style="margin-top:1em;">Login Here</h3>
+                <form id="LoginForm" style="margin-top:2em;">
+                    <div class="form-group">
+                        <label for="userIdInput">User ID</label>
+                        <input type="text" class="form-control" id="login" placeholder="Typer Username Here">
+                    </div>
+                    <button type="login" class="btn btn-secondary" id="login">Login</button>
+                </form>
+                <h6>New To BootBook? Create an Account <a href="addnewuser">Here</a></h6>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
