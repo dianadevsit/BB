@@ -36,9 +36,20 @@ $(document).ready(function() {
   $("#submitpairing").on("click", function(event) {
     event.preventDefault();
     console.log("Entered submit pairing button function");
+    for (i = 0; i < skillsResultsArray.length; i++) {
+      if (skillsResultsArray[i].skill === $("#skillForm").val()) {
+        var skillID2 = i;
+      }
+    }
+    for (i = 0; i < ratingsResultsArray.length; i++) {
+      if (ratingsResultsArray[i].skill === $("#ratingForm").val()) {
+        var ratingID2 = i;
+      }
+    }
+
     var skillSearchInput = {
-      skillID: $("#skillForm").val(),
-      ratingID: $("#ratingForm").val()
+      skillID: skillID2,
+      ratingID: ratingID2
     };
 
     var skillsResultsArray = [];
