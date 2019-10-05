@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../styles/styles.css">
     <title>BootBook Home</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- <script src="../js/login.js"></script> -->
 </head>
 
 <body>
@@ -31,14 +32,39 @@
                 <form id="LoginForm" style="margin-top:2em;">
                     <div class="form-group">
                         <label for="userIdInput">User ID</label>
-                        <input type="text" class="form-control" id="login" placeholder="Typer Username Here">
+                        <input type="text" class="form-control" id="userIDtext" placeholder="Type Username Here">
                     </div>
-                    <button type="login" class="btn btn-secondary" id="login">Login</button>
+                    <button type="login" class="btn btn-secondary" id="loginsubmit">Login</button>
                 </form>
                 <h6>New To BootBook? Create an Account <a href="addnewuser">Here</a></h6>
             </div>
         </div>
     </div>
+
+
+<script>
+console.log("entered");
+console.log("entered before submit");
+
+$("#loginsubmit").on("click", function(event) {
+  event.preventDefault();
+  console.log("entered after submit");
+  console.log("user ID value" + $("#userIDtext").val());
+
+  var userID1 = $("#userIDtext").val();
+
+  console.log("Ready to make the get request");
+  console.log("IDs " + userID1);
+    $.get("/api/getUser/" + userID1, function(data) {
+      console.log("After the get request is complete");
+      userResultsArray = data;
+      console.log(userResultsArray);
+      window.location.href = "/profile";
+    });
+});
+
+</script>
+
 </body>
 
 </html>
