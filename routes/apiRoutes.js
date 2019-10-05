@@ -3,7 +3,17 @@ var db = require("../models");
 // Routes
 // =============================================================
 module.exports = function(app) {
-  // GET route for getting all of the posts
+  app.get("/api/getUser/:userID1", function(req, res) {
+    db.users
+      .findOne({
+        where: {
+          userID: req.params.userID1
+        }
+      })
+      .then(function(results) {
+        return res.json(results);
+      });
+  });
 
   app.get("/api/getSkillProfileResults/:skillID1/:ratingID1", function(
     req,
@@ -40,13 +50,6 @@ module.exports = function(app) {
     console.log("Hello");
     db.users
       .create({
-        // userID: "user001",
-        // userPWD: "user001",
-        // firstName: "FDimi",
-        // lastName: "LDimi",
-        // emailID: "Dimi@gmial.com",
-        // studentType: "Alumnus",
-        // userBio: "My Bio"
         userID: req.body.userID,
         userPWD: req.body.userPWD,
         firstName: req.body.firstName,
