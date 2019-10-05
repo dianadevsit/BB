@@ -21,6 +21,18 @@ module.exports = function(app) {
       });
   });
 
+  app.get("/api/getUsersSkillsProfiles", function(req, res) {
+    db.userSkillsProfiles
+      .findAll({
+        where: {
+          userID: req.params.skillID1
+        }
+      })
+      .then(function(results) {
+        return res.json(results);
+      });
+  });
+
   // Send the full list of skills up to the UI
   app.get("/api/getSkillsList", function(req, res) {
     db.skills.findAll({}).then(function(results) {
