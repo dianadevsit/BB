@@ -36,9 +36,9 @@ $(document).ready(function() {
   var skillsResultsArray = [];
   getUserSkills();
   function getUserSkills() {
-    $.get("/api/getSkillsList", function(data) {
+    $.get("/api/getSkillsList", function(data1) {
       //edit this to a get request for unique skills//
-      skillsResultsArray = data;
+      skillsResultsArray = data1;
       for (i = 0; i < skillsResultsArray.length; i++) {
         console.log(skillsResultsArray[i].skill);
       }
@@ -50,8 +50,8 @@ $(document).ready(function() {
 
   var ratingsResultsArray = [];
 
-  getListOfRatings();
-  function getListOfRatings() {
+  getUserRatings();
+  function getUserRatings() {
     $.get("/api/getRatingsList", function(data) {
       console.log("After the get ratings request is complete");
       ratingsResultsArray = data;
@@ -67,14 +67,21 @@ $(document).ready(function() {
       console.log(ratingsResultsArray);
     });
   }
+  //function for adding new skill withb jquery to the table
+  $("#submitSkill").on("click", function(event) {
+    event.preventDefault();
+    console.log("Entered submit pairing button function");
+    var skillName = $("#skill-name").val();
+    var persRating = $("#rating-form").val();
 
-  // $("#submitSkill").on("click", function(event) {
-  //   event.preventDefault();
-  //   console.log("Entered submit pairing button function");
-  //   var skillInput = {
-  //     skillID: $("#skill-name").val(),
-  //     ratingID: $("#rating-form").val()
-  //   };
+    $("#skillRatingRows").prepend(
+      "<tr>",
+      "<td>" + skillName + "</td>",
+      "<td> " + persRating + " </td>",
+      "<td> " + "08/11/2019" + "</td>",
+      "</tr>"
+    );
+  });
 
   //   var skillArray = [];
   //   console.log(skillInput);
