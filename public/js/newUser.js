@@ -35,7 +35,7 @@ $(document).ready(function() {
       console.log("About to make the post route call");
       $.post("/api/addNewUser", addUser, function() {
         console.log("Added new user");
-        //   window.location.href = "/profile";
+        window.location.href = "/profile";
       });
     }
   });
